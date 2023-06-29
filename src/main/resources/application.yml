@@ -1,0 +1,46 @@
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone : http://localhost:8761/eureka/
+      #defaultZone : https://nexio-register-erureka-server.herokuapp.com/eureka/
+
+  server:
+    eviction-interval-timer-in-ms: 5000
+
+spring:
+  application:
+    name: gateway-routing
+  cloud:
+    gateway:
+      routes:
+#        - id: order-service
+#          predicates:
+#            - Path=/api/orders/**
+#          uri: https://nexio-order-service.herokuapp.com/
+  
+#              
+#        - id: stocks-service
+#          predicates:
+#            - Path=/api/stocks/**
+#          uri: https://nexio-stock-service.herokuapp.com/
+#
+
+          
+        - id: order-service
+          predicates:
+            - Path=/api/orders/**
+          uri: http://localhost:9090/
+       
+                    
+        - id: stock-service
+          predicates:
+            - Path=/api/stocks/**
+          uri: http://localhost:9191/  
+                
+        
+            
+            
