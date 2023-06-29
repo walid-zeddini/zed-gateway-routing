@@ -30,13 +30,13 @@ spring:
 #
 
           
-        - id: order-service
+        - id: zed-order-service
           predicates:
             - Path=/api/orders/**
           uri: http://localhost:9090/
        
                     
-        - id: stock-service
+        - id: zed-stock-service
           predicates:
             - Path=/api/stocks/**
           uri: http://localhost:9191/  
