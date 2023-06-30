@@ -33,13 +33,14 @@ spring:
         - id: zed-order-service
           predicates:
             - Path=/api/orders/**
-          uri: http://localhost:9090/
-       
+          #uri: http://localhost:9090/
+          uri: https://zed-order-service-cd54f752cf9a.herokuapp.com/
                     
         - id: zed-stock-service
           predicates:
             - Path=/api/stocks/**
-          uri: http://localhost:9191/  
+          #uri: http://localhost:9191/
+          uri: https://zed-stock-service-71dbea08ba3d.herokuapp.com/  
                 
         
             
