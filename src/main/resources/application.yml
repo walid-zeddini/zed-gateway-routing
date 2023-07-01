@@ -21,13 +21,13 @@ spring:
 #        - id: order-service
 #          predicates:
 #            - Path=/api/orders/**
-#          uri: https://nexio-order-service.herokuapp.com/
+#          uri: https://zed-order-service.herokuapp.com/
   
 #              
 #        - id: stocks-service
 #          predicates:
 #            - Path=/api/stocks/**
-#          uri: https://nexio-stock-service.herokuapp.com/
+#          uri: https://zed-stock-service.herokuapp.com/
 #
 
           
